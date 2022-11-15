@@ -5,11 +5,12 @@ body {
 }
 #mainHeader {
     text-align: center;
+    font-family: "American Typewriter";
+    margin-bottom: 1em;
 }
 section {
-    color: blanchedalmond;
-    padding: 3em;
 
+    padding: 3em;
 }
 select {
     background-color: #d67d53;
@@ -20,4 +21,21 @@ input {
 }
 text {
     color: white;
+}
+p {
+    align-content: flex-end;
+    padding: 20px;
+    color: #d67d53;
+    font-weight: bold;
+    font-size: larger;
+
+}
+.coffee {
+    border: ridge blanchedalmond .5em;
+    background-color: #5f4935;
+    margin-bottom: 15px;
+
+}
+h1{
+    color: blanchedalmond;
 }

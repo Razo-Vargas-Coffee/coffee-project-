@@ -3,7 +3,7 @@
 
     function renderCoffee(coffee) {
 
-        let html = '<div class="coffee d-flex col-4 croast">';
+        let html = '<div class="coffee d-flex col-4">';
         html += '<h1>' + coffee.name + '</h1>';
         html += '<p>' + coffee.roast + '</p>';
         html += '</div>';
