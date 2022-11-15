@@ -39,14 +39,24 @@ function updateCoffees(e) {
     function searchCoffees() {
         let searchRoast = searchBox.value.toUpperCase();
         let filteredCoffees = [];
-        console.log(searchRoast);
+        // console.log(searchRoast);
         coffees.forEach(function(coffee) {
             if (coffee.name.toUpperCase().includes(searchRoast)) {
                 filteredCoffees.push(coffee);
-                console.log(filteredCoffees);
+                // console.log(filteredCoffees);
             }
         });
         tbody.innerHTML = renderCoffees(filteredCoffees);
+    }
+    function addCoffees (input) {
+        var addID = coffees.length+1;
+        var addName = inputName.value.toString();
+        var addRoast = inputRoast.value.toString();
+        input = {id: addID, name: addName, roast: addRoast};
+        coffees.push(input);
+        console.log(coffees);
+        tbody.innerHTML = renderCoffees(coffees);
+
     }
 
 
@@ -68,11 +78,6 @@ function updateCoffees(e) {
             {id: 14, name: 'French', roast: 'dark'},
         ];
 
-    // var inputName = document.querySelector('#input-name');
-    // var inputRoast = document.querySelector('#input-roast');
-    // var addCoffeeButton = document.querySelector('#input-submit');
-    // addCoffeeButton.addEventListener('click', addCoffees);
-    //
     // function addCoffees (input) {
     //     var addID = coffees.length+1;
     //     var addName = inputName.value.toString();
@@ -86,9 +91,27 @@ function updateCoffees(e) {
     var tbody = document.querySelector('#coffees');
     var submitButton = document.querySelector('#submit');
     var roastSelection = document.querySelector('#roast-selection');
+    var searchBox = document.querySelector('#searchBox');
 
     tbody.innerHTML = renderCoffees(coffees);
 
-    submitButton.addEventListener('click', updateCoffees);
+    // submitButton.addEventListener('click', updateCoffees);
+    roastSelection.addEventListener('change', updateCoffees);
+    searchBox.addEventListener('keyup', searchCoffees);
+
+	// coffee-selection = 1; //var that keeps track of which table is visible (1 or 2)
+	// function change_table() {
+	// 	t1 = document.getElementById("TABLE1");
+	// 	t2 = document.getElementById("TABLE2");
+	// 	if(visible == 1) {
+	// 		visible = 2;
+	// 		t1.style.display = 'none';
+	// 		t2.style.display = 'block';
+	// 	} else {
+	// 		visible = 1;
+	// 		t1.style.display = 'block';
+	// 		t2.style.display = 'none';
+	// 	}
+	// }
 
 })();
