@@ -3,7 +3,7 @@
 
     function renderCoffee(coffee) {
 
-        let html = '<div class="coffee d-block col-4 mx-auto p-auto">';
+        let html = '<div class="coffee d-flex col-4 croast">';
         html += '<h1>' + coffee.name + '</h1>';
         html += '<p>' + coffee.roast + '</p>';
         html += '</div>';
@@ -39,11 +39,9 @@ function updateCoffees(e) {
     function searchCoffees() {
         let searchRoast = searchBox.value.toUpperCase();
         let filteredCoffees = [];
-        // console.log(searchRoast);
         coffees.forEach(function(coffee) {
             if (coffee.name.toUpperCase().includes(searchRoast)) {
                 filteredCoffees.push(coffee);
-                // console.log(filteredCoffees);
             }
         });
         tbody.innerHTML = renderCoffees(filteredCoffees);
@@ -81,7 +79,6 @@ function updateCoffees(e) {
 
 
     var tbody = document.querySelector('#coffees');
-    var submitButton = document.querySelector('#submit');
     var roastSelection = document.querySelector('#roast-selection');
     var searchBox = document.querySelector('#searchBox');
     var addCoffeeRoast = document.querySelector("#add-coffee-roast");
@@ -90,7 +87,6 @@ function updateCoffees(e) {
 
     tbody.innerHTML = renderCoffees(coffees);
 
-     //submitButton.addEventListener('click', updateCoffees);
     roastSelection.addEventListener('change', updateCoffees);
     searchBox.addEventListener('keyup', searchCoffees);
     addCoffeeButton.addEventListener('click', addCoffee);

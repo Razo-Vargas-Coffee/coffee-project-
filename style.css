@@ -1,9 +1,23 @@
-table {
-    border-collapse: collapse;
-    margin: 15px 0;
-}
 
-td, th {
-    border: 1px solid black;
-    padding: 5px 10px;
+body {
+    background-image: url("img/coffee blue bg.webp");
+    /*color: #808080;*/
+}
+#mainHeader {
+    text-align: center;
+}
+section {
+    color: blanchedalmond;
+    padding: 3em;
+
+}
+select {
+    background-color: #d67d53;
+}
+input {
+    background-color: #88745e;
+    text-decoration: white;
+}
+text {
+    color: white;
 }
