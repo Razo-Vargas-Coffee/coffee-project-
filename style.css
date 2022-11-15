@@ -6,7 +6,7 @@ body {
 #mainHeader {
     text-align: center;
     font-family: "American Typewriter";
-    margin-bottom: 1em;
+    margin-bottom: .5em;
 }
 section {
 
@@ -38,4 +38,8 @@ p {
 }
 h1{
     color: blanchedalmond;
+}
+form {
+    padding-right: 75px;
+    width: 400px;
 }
