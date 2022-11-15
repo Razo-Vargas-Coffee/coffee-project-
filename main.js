@@ -48,11 +48,12 @@ function updateCoffees(e) {
         });
         tbody.innerHTML = renderCoffees(filteredCoffees);
     }
-    function addCoffees (input) {
+    function addCoffee (event) {
+        event.preventDefault();
         var addID = coffees.length+1;
-        var addName = inputName.value.toString();
-        var addRoast = inputRoast.value.toString();
-        input = {id: addID, name: addName, roast: addRoast};
+        var addName = addCoffeeName.value.toString();
+        var addRoast = addCoffeeRoast.value.toString();
+        let input = {id: addID, name: addName, roast: addRoast};
         coffees.push(input);
         console.log(coffees);
         tbody.innerHTML = renderCoffees(coffees);
@@ -78,40 +79,22 @@ function updateCoffees(e) {
             {id: 14, name: 'French', roast: 'dark'},
         ];
 
-    // function addCoffees (input) {
-    //     var addID = coffees.length+1;
-    //     var addName = inputName.value.toString();
-    //     var addRoast = inputRoast.value.toString();
-    //     input = {id: addID, name: addName, roast: addRoast};
-    //     coffees.push(input);
-    //     console.log(coffees);
-    //     tbody.innerHTML = renderCoffees(coffees);
-    //
-    // }
+
     var tbody = document.querySelector('#coffees');
     var submitButton = document.querySelector('#submit');
     var roastSelection = document.querySelector('#roast-selection');
     var searchBox = document.querySelector('#searchBox');
+    var addCoffeeRoast = document.querySelector("#add-coffee-roast");
+    var addCoffeeName = document.querySelector("#add-coffee-name")
+    var addCoffeeButton = document.querySelector("#submitCoffee");
 
     tbody.innerHTML = renderCoffees(coffees);
 
-    // submitButton.addEventListener('click', updateCoffees);
+     //submitButton.addEventListener('click', updateCoffees);
     roastSelection.addEventListener('change', updateCoffees);
     searchBox.addEventListener('keyup', searchCoffees);
+    addCoffeeButton.addEventListener('click', addCoffee);
 
-	// coffee-selection = 1; //var that keeps track of which table is visible (1 or 2)
-	// function change_table() {
-	// 	t1 = document.getElementById("TABLE1");
-	// 	t2 = document.getElementById("TABLE2");
-	// 	if(visible == 1) {
-	// 		visible = 2;
-	// 		t1.style.display = 'none';
-	// 		t2.style.display = 'block';
-	// 	} else {
-	// 		visible = 1;
-	// 		t1.style.display = 'block';
-	// 		t2.style.display = 'none';
-	// 	}
-	// }
+
 
 })();
