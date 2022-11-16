@@ -28,18 +28,15 @@ p {
     color: #d67d53;
     font-weight: bold;
     font-size: larger;
-
 }
 .coffee {
     border: ridge blanchedalmond .5em;
     background-color: #5f4935;
     margin-bottom: 15px;
-
 }
 h1{
     color: blanchedalmond;
 }
 form {
-    padding-right: 75px;
-    width: 400px;
+    width: 500px;
 }
