@@ -91,6 +91,22 @@ function updateCoffees(e) {
     searchBox.addEventListener('keyup', searchCoffees);
     addCoffeeButton.addEventListener('click', addCoffee);
 
+    var cookieValue = document.getElementById("coffees");
+    var value = cookieValue .getAttribute('add-coffee-roast');
+    if(typeof(Storage)!=="undefined") {
+        //     alert(value);
+        localStorage["GetData"] = value;
+        //     alert(localStorage["GetData"]);
+        //
+        // }
+
+        function loading() {
+            alert("coming");
+            var allcookies = localStorage["GetData"];
+            alert(allcookies);
+
+        }
+    }
 
 
 })();
