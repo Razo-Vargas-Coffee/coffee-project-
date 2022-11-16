@@ -1,7 +1,5 @@
-
 body {
     background-image: url("img/coffee blue bg.webp");
-    /*color: #808080;*/
 }
 #mainHeader {
     text-align: center;
@@ -10,27 +8,25 @@ body {
     font-size: 60px;
 }
 section {
-
     padding: 3em;
 }
 select {
-    background-color: #d67d53;
+    background-color: #D67D53;
 }
 input {
-    background-color: #88745e;
+    background-color: #88745E;
     text-decoration: white;
 }
-
 p {
     align-content: flex-end;
     padding: 20px;
-    color: #d67d53;
+    color: #D67D53;
     font-weight: bold;
     font-size: larger;
 }
 .coffee {
     border: ridge blanchedalmond .5em;
-    background-color: #5f4935;
+    background-color: #5F4935;
     margin-bottom: 15px;
 }
 h1{

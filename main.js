@@ -49,9 +49,9 @@
 
     function addCoffee(event) {
         event.preventDefault();
-        var addID = coffees.length + 1;
-        var addName = addCoffeeName.value.toString();
-        var addRoast = addCoffeeRoast.value.toString();
+        let addID = coffees.length + 1;
+        let addName = addCoffeeName.value.toString();
+        let addRoast = addCoffeeRoast.value.toString();
         let input = {id: addID, name: addName, roast: addRoast};
         coffees.push(input);
         console.log(coffees);
@@ -61,7 +61,7 @@
 
 
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
-    var coffees = [
+    let coffees = [
         {id: 1, name: 'Light City', roast: 'light'},
         {id: 2, name: 'Half City', roast: 'light'},
         {id: 3, name: 'Cinnamon', roast: 'light'},
@@ -79,12 +79,12 @@
     ];
 
 
-    var tbody = document.querySelector('#coffees');
-    var roastSelection = document.querySelector('#roast-selection');
-    var searchBox = document.querySelector('#searchBox');
-    var addCoffeeRoast = document.querySelector("#add-coffee-roast");
-    var addCoffeeName = document.querySelector("#add-coffee-name")
-    var addCoffeeButton = document.querySelector("#submitCoffee");
+    let tbody = document.querySelector('#coffees');
+    let roastSelection = document.querySelector('#roast-selection');
+    let searchBox = document.querySelector('#searchBox');
+    let addCoffeeRoast = document.querySelector("#add-coffee-roast");
+    let addCoffeeName = document.querySelector("#add-coffee-name")
+    let addCoffeeButton = document.querySelector("#submitCoffee");
 
     tbody.innerHTML = renderCoffees(coffees);
 
@@ -92,22 +92,16 @@
     searchBox.addEventListener('keyup', searchCoffees);
     addCoffeeButton.addEventListener('click', addCoffee);
 
-    var cookieValue = document.getElementById("coffees");
-    var value = cookieValue.getAttribute('add-coffee-roast');
-    if (typeof (Storage) !== "undefined") {
-        //     alert(value);
-        localStorage["GetData"] = value;
-        //     alert(localStorage["GetData"]);
-        //
-        // }
+    // Attempt at local Storage ↓
 
-        function loading() {
-            alert("coming");
-            var allcookies = localStorage["GetData"];
-            alert(allcookies);
-
-        }
-    }
-
+    // var coffeeValue = document.getElementById("coffees");
+    // var value = coffeeValue.getAttribute('add-coffee-roast');
+    // if (typeof (Storage) !== "undefined") {
+    //     localStorage["GetData"] = value;
+    //      }
+    //     function loading() {
+    //         var allCoffees = localStorage["GetData"];
+    //     }
+    // }
 
 })();
