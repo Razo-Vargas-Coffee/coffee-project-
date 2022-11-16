@@ -59,7 +59,7 @@
 
     }
 
-
+ //For Coffee Display
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
     let coffees = [
         {id: 1, name: 'Light City', roast: 'light'},
@@ -87,21 +87,12 @@
     let addCoffeeButton = document.querySelector("#submitCoffee");
 
     tbody.innerHTML = renderCoffees(coffees);
+   // Event listeners tied to functions
 
     roastSelection.addEventListener('change', updateCoffees);
     searchBox.addEventListener('keyup', searchCoffees);
     addCoffeeButton.addEventListener('click', addCoffee);
 
-    // Attempt at local Storage ↓
 
-    // var coffeeValue = document.getElementById("coffees");
-    // var value = coffeeValue.getAttribute('add-coffee-roast');
-    // if (typeof (Storage) !== "undefined") {
-    //     localStorage["GetData"] = value;
-    //      }
-    //     function loading() {
-    //         var allCoffees = localStorage["GetData"];
-    //     }
-    // }
 
 })();
