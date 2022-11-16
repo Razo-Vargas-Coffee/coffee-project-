@@ -42,3 +42,10 @@ form {
 h2 {
     font-family: "American Typewriter";
 }
+.img-text {
+    color: blanchedalmond;
+}
+.slide2 {
+    width: 100%;
+    height: 450px;
+}
